@@ -4,14 +4,14 @@ const articlesRouter = require("./articles")
 
 const authorsRouter = require("./authors")
  
-//const reviewsRouter = require("./reviews")
+const categoriesRouter = require("./categories")
  
 
 router.use("/articles", articlesRouter)
 
 router.use("/authors",authorsRouter)
 
-//router.use("/reviews",reviewsRouter)
+router.use("/categories",categoriesRouter)
 
 
 module.exports = router
