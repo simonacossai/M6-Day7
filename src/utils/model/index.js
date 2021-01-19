@@ -1,4 +1,4 @@
-const db = require("../db")
+/*const db = require("../db")
 
 class Model {
     constructor(name){
@@ -18,7 +18,7 @@ class Model {
         if(!id){
             throw new Error('id not provided!')
         }
-        const query = `SELECT * FROM ${this.name} WHERE id=${parseInt(id, 10)}`
+        const query = `SELECT * FROM ${this.name} WHERE article_id=${parseInt(id, 10)}`
         const response = await this.run(query);
         return response;
     }
@@ -28,7 +28,7 @@ class Model {
         if(!id){
             throw new Error('Hey you did not provided id!')
         }
-        const query = `DELETE  FROM ${this.name} WHERE id=${parseInt(id, 10)}`
+        const query = `DELETE  FROM ${this.name} WHERE article_id=${parseInt(id, 10)}`
         const response = await this.run(query);
         return response;
     }
@@ -39,7 +39,7 @@ class Model {
         }
         const entries = Object.entries(fields); // [['name','Luis'],['lastname','Ordonez']] => name='Luis' ,
 
-        const query = `UPDATE ${this.name} SET ${entries.map(([column,value])=>`${column}='${value}'`).join(",")} WHERE id=${parseInt(id)};`
+        const query = `UPDATE ${this.name} SET ${entries.map(([column,value])=>`${column}='${value}'`).join(",")} WHERE article_id=${parseInt(id)};`
         const response = await this.run(query);
         return response;
     }
@@ -72,4 +72,4 @@ class Model {
 }
 
 
-module.exports = Model;
+module.exports = Model;*/
