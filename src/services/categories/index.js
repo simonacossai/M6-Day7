@@ -12,6 +12,16 @@ router.get("/", async (req, res, next) => {
     res.status(500).send(e);
   }
 });
+router.get("/count", async (req, res, next) => {
+  try {
+    const { rows } = await db.query("SELECT categories.category_id, categories.name, COUNT(articles.category_id) AS total_articles FROM categories INNER JOIN articles ON categories.category_id=articles.category_id GROUP BY (categories.category_id);");
+    console.log(rows)
+    res.send(rows);
+  } catch (e) {
+    console.log(e);
+    res.status(500).send(e);
+  }
+});
 
 router.get("/:id", async (req, res, next) => {
   try {
